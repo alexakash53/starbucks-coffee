@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Starbucks Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section>
         <div class="circle"></div>
@@ -22,17 +24,19 @@
         <div class="content">
             <div class="textBox">
                 <h2>It's not jist Coffee <br>It's <span>starbucks</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium non officia maxime. Est doloremque, accusantium perspiciatis eius aliquid rem molestiae ratione assumenda, pariatur cumque eveniet maiores illo beatae quasi cupiditate!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium non officia maxime. Est
+                    doloremque, accusantium perspiciatis eius aliquid rem molestiae ratione assumenda, pariatur cumque
+                    eveniet maiores illo beatae quasi cupiditate!</p>
                 <a href="#">learn more</a>
             </div>
             <div class="imgBox">
-                <img src="images/img1.png" class="starbucks">
+                <img id="change" src="images/img1.png" class="starbucks">
             </div>
-        </div> 
+        </div>
         <div class="thumb">
-            <li><img src="images/thumb1.png"></li>
-            <li><img src="images/thumb2.png"></li>
-            <li><img src="images/thumb3.png"></li>
+            <li><img onclick="handleImage('images/img1.png','background:#017143')" src="images/thumb1.png"></li>
+            <li><img onclick="handleImage('images/img2.png','background:#127596')" src="images/thumb2.png"></li>
+            <li><img onclick="handleImage('images/img3.png','background:#DE5CB7')" src="images/thumb3.png"></li>
         </div>
         <ul class="sci">
             <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
@@ -40,5 +44,16 @@
             <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
         </ul>
     </section>
+
+
+    <script>
+        function handleImage(image, bg) {
+            let change = document.getElementById('change')
+            change.setAttribute("src", image);
+            const circle = document.querySelector('.circle')
+            circle.setAttribute('style', bg)
+        }
+    </script>
 </body>
+
 </html>
